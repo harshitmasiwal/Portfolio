@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+@media (width <= 500px) {
+    *{
+        
+        overflow-x: hidden;
+    }
+  }
+
+body{
+    overflow-x: hidden; /* Prevent horizontal scroll globally */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.nav-menu {
+    
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+
+/* Navbar Links */
+.navbar-nav a {
+    color: black;
+    position: relative;
+}
+.navbar-nav a:hover {
+    color: #fca61f;
+}
+.navbar-nav a:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: #fca61f;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar-nav a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+/* Buttons */
+.c-btn {
+    border: none;
+    background: #fca61f;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.h-btn:hover {
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-10px);
+    transition: 0.5s ease;
+}
+
+
+/* Home Section */
+.home {
+
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0 10px;
+    overflow: hidden; /* Prevent overflow from animations */
+    text-align: center;
+}
+.home h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange {
+    color: #6f34fe;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.home img {
+    animation: floatimg 4s ease-in-out infinite;
+    max-width: 100%; /* Prevent images from causing overflow */
+    margin-left: 30%;
+    
+}
+
+/* Animation */
+@keyframes floatimg {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}
+
+/* Expertise Section */
+.heading small {
+
+    color: #6f34fe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.heading h3 {
+    margin-top: 0.5rem;
+    color: #3f396d;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expertise .service-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 0.7rem;
+    overflow: hidden; /* Prevent overflow */
+}
+.expertise a {
+    color: #fca61f;
+    text-decoration: none;
+}
+.expertise a:hover {
+    color: #6f34fe;
+}
+
+/* Skill Section */
+.skill {
+
+    background-color: rgb(234, 234, 249);
+    text-align: center;
+}
+
+.progress-card {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.progress-card:hover {
+    transform: scale(1.05);
+}
+
+.circular-progress {
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 0deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.circular-progress[data-progress="100"] {
+    background: conic-gradient(#03e80b 358deg, #ededed 0deg);
+}
+
+.circular-progress[data-progress="70"] {
+    background: conic-gradient(#7d2ae8 252deg, #ededed 108deg);
+}
+
+.circular-progress[data-progress="60"] {
+    background: conic-gradient(#00e5ff 216deg, #ededed 144deg);
+}
+
+.circular-progress[data-progress="40"] {
+    background: conic-gradient(#f88221 144deg, #ededed 0deg);
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 1.2rem;
+    color: #0c0317;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Portfolio Section */
+#myBtnContainer {
+    
+    margin-bottom: 45px;
+}
+#myBtnContainer button {
+    border: none;
+    color: black;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 15px;
+}
+#myBtnContainer button:hover {
+    color: #fca61f;
+}
+
+/* Blog Section */
+.blog {
+    
+    background-color: #f2f2ff;
+}
+.blog .blogpost .card {
+    border: none;
+    border-radius: 5%;
+}
+.blog .blogpost h4, .blogpost a {
+    color: #3f396d;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.blogpost a:hover { 
+    color: #fca61f;
+}
+
+
+/* Contact Section */
+.contact {
+    background-color: #f3f3f3;
+}
+.contact-form .form-control {
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+
+
+/* Footer */
+footer {
+    background-color: #211e39;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a {
+    color: #6c757d;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    color: #fca61f;
+}
