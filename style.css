@@ -129,7 +129,7 @@ body{
 
 /* Skill Section */
 .skill {
-
+    overflow: hidden;
     background-color: rgb(234, 234, 249);
     text-align: center;
 }
