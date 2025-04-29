@@ -500,8 +500,17 @@
                                 required />
                         </div>
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Mobile No."
-                                required />
+                            <input 
+  type="text" 
+  class="form-control" 
+  id="phone" 
+  name="phone" 
+  placeholder="Mobile No." 
+  required 
+  maxlength="10" 
+  pattern="[0-9]{10}" 
+  inputmode="numeric" 
+/>
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control" id="message" name="message" placeholder="Message" required
